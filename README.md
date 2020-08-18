@@ -1,0 +1,1 @@
+Template UDMI site model.
