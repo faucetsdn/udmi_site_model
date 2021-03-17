@@ -29,7 +29,7 @@
     "proxy_ids": [ "SNS-4", "AHU-22" ]
   },
   "cloud": {
-    "auth_type": "RS256"
+    "auth_type": "ES256"
   },
   "version": 1,
   "timestamp": "2020-05-01T13:39:07Z",
