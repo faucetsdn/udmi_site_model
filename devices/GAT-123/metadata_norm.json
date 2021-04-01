@@ -1,16 +1,10 @@
 {
   "version": 1,
-  "timestamp": "2021-03-18T17:16:01Z",
+  "timestamp": "2021-04-01T12:56:47Z",
   "pointset": {
     "points": {
-      "filter_alarm_pressure_status": {
+      "globulating_globar": {
         "units": "Bars"
-      },
-      "filter_differential_pressure_sensor": {
-        "units": "Degrees-Celsius"
-      },
-      "filter_differential_pressure_setpoint": {
-        "units": "No-units"
       }
     }
   },
@@ -21,7 +15,7 @@
     },
     "physical_tag": {
       "asset": {
-        "guid": "drw://TBC",
+        "guid": "drw://TBB",
         "name": "GAT-123",
         "site": "ZZ-TRI-FECTA"
       }
@@ -33,5 +27,5 @@
   "cloud": {
     "auth_type": "ES256"
   },
-  "hash": "67c99e8b"
+  "hash": "0a9fb0ca"
 }

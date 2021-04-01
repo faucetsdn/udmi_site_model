@@ -1,14 +1,8 @@
 {
   "pointset": {
     "points": {
-      "filter_alarm_pressure_status": {
+      "globulating_globar": {
         "units": "Bars"
-      },
-      "filter_differential_pressure_sensor": {
-        "units": "Degrees-Celsius"
-      },
-      "filter_differential_pressure_setpoint": {
-        "units": "No-units"
       }
     }
   },
@@ -19,7 +13,7 @@
     },
     "physical_tag": {
       "asset": {
-        "guid": "drw://TBC",
+        "guid": "drw://TBB",
         "site": "ZZ-TRI-FECTA",
         "name": "GAT-123"
       }
