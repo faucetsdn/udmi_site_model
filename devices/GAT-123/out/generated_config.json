@@ -1,0 +1,11 @@
+{
+  "timestamp" : "2021-07-13T16:25:32Z",
+  "gateway" : {
+    "proxy_ids" : [ "SNS-4", "AHU-22" ]
+  },
+  "pointset" : {
+    "points" : {
+      "globulating_globar" : { }
+    }
+  }
+}

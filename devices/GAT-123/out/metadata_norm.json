@@ -1,12 +1,9 @@
 {
+  "timestamp": "2021-07-13T16:25:32Z",
   "version": 1,
-  "timestamp": "2021-04-01T12:56:47Z",
-  "pointset": {
-    "points": {
-      "globulating_globar": {
-        "units": "Bars"
-      }
-    }
+  "hash": "f5572508",
+  "cloud": {
+    "auth_type": "ES256"
   },
   "system": {
     "location": {
@@ -16,16 +13,19 @@
     "physical_tag": {
       "asset": {
         "guid": "drw://TBB",
-        "name": "GAT-123",
-        "site": "ZZ-TRI-FECTA"
+        "site": "ZZ-TRI-FECTA",
+        "name": "GAT-123"
       }
     }
   },
   "gateway": {
     "proxy_ids": [ "SNS-4", "AHU-22" ]
   },
-  "cloud": {
-    "auth_type": "ES256"
-  },
-  "hash": "0a9fb0ca"
+  "pointset": {
+    "points": {
+      "globulating_globar": {
+        "units": "Bars"
+      }
+    }
+  }
 }

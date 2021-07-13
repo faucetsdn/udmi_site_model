@@ -1,0 +1,17 @@
+{
+  "timestamp" : "2021-07-13T16:25:32Z",
+  "localnet" : {
+    "subsystem" : { }
+  },
+  "pointset" : {
+    "points" : {
+      "filter_alarm_pressure_status" : {
+        "ref" : "BV11.present_value"
+      },
+      "filter_differential_pressure_sensor" : {
+        "ref" : "AV12.present_value"
+      },
+      "filter_differential_pressure_setpoint" : { }
+    }
+  }
+}
