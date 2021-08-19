@@ -10,7 +10,9 @@
         "ref": "AV12.present_value"
       },
       "filter_differential_pressure_setpoint": {
-        "units": "Bars"
+        "units": "Bars",
+        "writeable": true,
+        "baseline_value": 98
       }
     }
   },

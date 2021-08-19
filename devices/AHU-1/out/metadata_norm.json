@@ -1,7 +1,7 @@
 {
-  "timestamp": "2021-07-13T16:25:32Z",
+  "timestamp": "2021-08-19T03:47:38Z",
   "version": 1,
-  "hash": "fd58814f",
+  "hash": "ad14e8be",
   "cloud": {
     "auth_type": "RS256"
   },
@@ -33,7 +33,9 @@
         "ref": "AV12.present_value"
       },
       "filter_differential_pressure_setpoint": {
-        "units": "Bars"
+        "units": "Bars",
+        "writeable": true,
+        "baseline_value": 98
       }
     }
   }

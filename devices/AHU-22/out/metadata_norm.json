@@ -1,7 +1,7 @@
 {
-  "timestamp": "2021-07-13T16:25:32Z",
+  "timestamp": "2021-08-19T03:34:08Z",
   "version": 1,
-  "hash": "c1571585",
+  "hash": "7f347eca",
   "system": {
     "location": {
       "site": "ZZ-TRI-FECTA",
@@ -24,7 +24,11 @@
     "proxy_ids": [ ]
   },
   "localnet": {
-    "subsystem": { }
+    "subsystem": {
+      "bacnet": {
+        "local_id": "0x65"
+      }
+    }
   },
   "pointset": {
     "points": {

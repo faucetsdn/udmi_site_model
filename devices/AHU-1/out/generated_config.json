@@ -1,5 +1,5 @@
 {
-  "timestamp" : "2021-07-13T16:25:32Z",
+  "timestamp" : "2021-08-19T03:47:38Z",
   "pointset" : {
     "points" : {
       "filter_alarm_pressure_status" : {
@@ -8,7 +8,9 @@
       "filter_differential_pressure_sensor" : {
         "ref" : "AV12.present_value"
       },
-      "filter_differential_pressure_setpoint" : { }
+      "filter_differential_pressure_setpoint" : {
+        "set_value" : 98
+      }
     }
   }
 }
