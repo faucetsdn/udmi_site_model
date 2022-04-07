@@ -1,7 +1,7 @@
 {
-  "timestamp": "2021-08-19T03:34:08Z",
-  "version": 1,
-  "hash": "7f347eca",
+  "timestamp": "2022-04-07T14:23:39Z",
+  "version": "1",
+  "hash": "789265d3",
   "system": {
     "location": {
       "site": "ZZ-TRI-FECTA",
@@ -34,14 +34,16 @@
     "points": {
       "filter_alarm_pressure_status": {
         "units": "No-units",
-        "ref": "BV11.present_value"
+        "ref": "BV11.present_value",
+        "sample_limit_sec": 3600
       },
       "filter_differential_pressure_sensor": {
         "units": "Degrees-Celsius",
         "ref": "AV12.present_value"
       },
       "filter_differential_pressure_setpoint": {
-        "units": "Bars"
+        "units": "Bars",
+        "sample_limit_sec": 0
       }
     }
   }
