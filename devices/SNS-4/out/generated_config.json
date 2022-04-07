@@ -1,7 +1,14 @@
 {
-  "timestamp" : "2021-07-13T16:25:32Z",
+  "timestamp" : "2022-04-07T16:32:48Z",
+  "version" : "1.3.14",
   "pointset" : {
     "points" : {
+      "filter_alarm_pressure_status" : {
+        "sample_limit_sec" : 3600
+      },
+      "filter_differential_pressure_setpoint" : {
+        "sample_limit_sec" : 0
+      },
       "split_threshold" : { },
       "triangulating_axis" : { }
     }
