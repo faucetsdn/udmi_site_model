@@ -7,11 +7,13 @@
       },
       "filter_differential_pressure_sensor": {
         "units": "Degrees-Celsius",
-        "ref": "AV12.present_value"
+        "ref": "AV12.present_value",
+        "baseline_value": 10,
+        "baseline_tolerance": 2
       },
       "filter_differential_pressure_setpoint": {
         "units": "Bars",
-        "writeable": true,
+        "writable": true,
         "baseline_value": 98
       }
     }
