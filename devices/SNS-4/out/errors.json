@@ -1,5 +1,0 @@
-Exceptions for SNS-4
-  While validating envelope
-    system.physical_tag.asset.site ZZ-TRI-FECTA does not match expected zregistry1
-  devices/SNS-4
-    Extra out files: [exceptions.txt]

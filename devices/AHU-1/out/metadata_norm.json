@@ -1,13 +1,13 @@
 {
-  "timestamp": "2021-08-19T03:47:38Z",
-  "version": 1,
-  "hash": "ad14e8be",
+  "timestamp": "2022-04-13T17:37:35Z",
+  "version": "1",
+  "hash": "0b22659f",
   "cloud": {
     "auth_type": "RS256"
   },
   "system": {
     "location": {
-      "site": "ZZ-TRI-FECTA",
+      "site": "ZZ-TRI-FECTA-AHU",
       "section": "2-3N8C",
       "position": {
         "x": 111.0,
@@ -30,11 +30,13 @@
       },
       "filter_differential_pressure_sensor": {
         "units": "Degrees-Celsius",
+        "baseline_value": 10,
+        "baseline_tolerance": 2.0,
         "ref": "AV12.present_value"
       },
       "filter_differential_pressure_setpoint": {
         "units": "Bars",
-        "writeable": true,
+        "writable": true,
         "baseline_value": 98
       }
     }

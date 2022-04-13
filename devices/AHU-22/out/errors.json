@@ -1,5 +1,0 @@
-Exceptions for AHU-22
-  While validating envelope
-    system.physical_tag.asset.site ZZ-TRI-FECTA does not match expected zregistry1
-  devices/AHU-22
-    Extra out files: [exceptions.txt]
