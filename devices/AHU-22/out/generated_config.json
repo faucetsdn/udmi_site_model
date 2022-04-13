@@ -1,5 +1,6 @@
 {
-  "timestamp" : "2021-08-19T03:34:08Z",
+  "timestamp" : "2022-04-13T17:37:35Z",
+  "version" : "1.3.14",
   "localnet" : {
     "subsystem" : {
       "bacnet" : {
