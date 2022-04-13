@@ -1,17 +1,15 @@
 {
-  "timestamp" : "2022-04-07T15:17:39Z",
-  "version" : "1.3.14",
+  "timestamp" : "2021-08-19T03:47:38Z",
   "pointset" : {
     "points" : {
       "filter_alarm_pressure_status" : {
-        "ref" : "BV11.present_value",
-        "sample_limit_sec" : 3600
+        "ref" : "BV11.present_value"
       },
       "filter_differential_pressure_sensor" : {
         "ref" : "AV12.present_value"
       },
       "filter_differential_pressure_setpoint" : {
-        "sample_limit_sec" : 0
+        "set_value" : 98
       }
     }
   }

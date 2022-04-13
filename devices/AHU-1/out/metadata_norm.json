@@ -1,7 +1,7 @@
 {
-  "timestamp": "2022-04-07T15:17:39Z",
-  "version": "1",
-  "hash": "d85e8a62",
+  "timestamp": "2021-08-19T03:47:38Z",
+  "version": 1,
+  "hash": "ad14e8be",
   "cloud": {
     "auth_type": "RS256"
   },
@@ -26,8 +26,7 @@
     "points": {
       "filter_alarm_pressure_status": {
         "units": "No-units",
-        "ref": "BV11.present_value",
-        "sample_limit_sec": 3600
+        "ref": "BV11.present_value"
       },
       "filter_differential_pressure_sensor": {
         "units": "Degrees-Celsius",
@@ -35,8 +34,8 @@
       },
       "filter_differential_pressure_setpoint": {
         "units": "Bars",
-        "baseline_value": 98,
-        "sample_limit_sec": 0
+        "writeable": true,
+        "baseline_value": 98
       }
     }
   }
