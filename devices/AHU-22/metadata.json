@@ -9,7 +9,7 @@
         "units": "Degrees-Celsius",
         "ref": "AV12.present_value"
       },
-      "filter_differential_pressure_setpoint": {
+      "filter_differential_pressure": {
         "units": "Bars"
       }
     }
@@ -34,9 +34,9 @@
     "gateway_id": "GAT-123"
   },
   "localnet": {
-    "subsystem": {
-      "bacnet": {
-        "local_id": "0x65"
+    "families": {
+      "virtual": {
+        "id": "0x65"
       }
     }
   },

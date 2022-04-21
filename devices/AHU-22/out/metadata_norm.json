@@ -1,7 +1,7 @@
 {
-  "timestamp": "2022-04-13T17:37:35Z",
+  "timestamp": "2022-04-21T00:33:43Z",
   "version": "1",
-  "hash": "be15780c",
+  "hash": "cca218ea",
   "system": {
     "location": {
       "site": "ZZ-TRI-FECTA",
@@ -24,9 +24,9 @@
     "proxy_ids": [ ]
   },
   "localnet": {
-    "subsystem": {
-      "bacnet": {
-        "local_id": "0x65"
+    "families": {
+      "virtual": {
+        "id": "0x65"
       }
     }
   },
@@ -36,12 +36,12 @@
         "units": "No-units",
         "ref": "BV11.present_value"
       },
+      "filter_differential_pressure": {
+        "units": "Bars"
+      },
       "filter_differential_pressure_sensor": {
         "units": "Degrees-Celsius",
         "ref": "AV12.present_value"
-      },
-      "filter_differential_pressure_setpoint": {
-        "units": "Bars"
       }
     }
   }

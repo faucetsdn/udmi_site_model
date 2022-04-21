@@ -38,6 +38,12 @@
   "cloud": {
     "auth_type": "RS256"
   },
+  "discovery": {
+    "families": {
+      "virtual": {
+      }
+    }
+  },
   "version": 1,
   "timestamp": "2020-05-01T13:39:07Z",
   "hash": "181301c3"
