@@ -1,7 +1,7 @@
 {
-  "timestamp": "2022-04-21T00:33:43Z",
-  "version": "1",
-  "hash": "4efff286",
+  "timestamp": "2022-05-29T20:09:44Z",
+  "version": "1.34.14",
+  "hash": "b7b090d9",
   "cloud": {
     "auth_type": "RS256"
   },
@@ -25,6 +25,22 @@
   "discovery": {
     "families": {
       "virtual": { }
+    }
+  },
+  "testing": {
+    "targets": {
+      "applied": {
+        "target_point": "filter_differential_pressure_setpoint",
+        "target_value": 60
+      },
+      "failure": {
+        "target_point": "filter_alarm_pressure_status",
+        "target_value": false
+      },
+      "invalid": {
+        "target_point": "filter_differential_pressure_sensor",
+        "target_value": 15
+      }
     }
   },
   "pointset": {

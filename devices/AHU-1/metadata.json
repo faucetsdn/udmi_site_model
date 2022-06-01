@@ -44,6 +44,22 @@
       }
     }
   },
+  "testing": {
+    "targets": {
+      "applied": {
+        "target_point": "filter_differential_pressure_setpoint",
+        "target_value": 60
+      },
+      "failure": {
+        "target_point": "filter_alarm_pressure_status",
+        "target_value": false
+      },
+      "invalid": {
+        "target_point": "filter_differential_pressure_sensor",
+        "target_value": 15
+      }
+    }
+  },
   "version": 1,
   "timestamp": "2020-05-01T13:39:07Z",
   "hash": "181301c3"
