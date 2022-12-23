@@ -1,7 +1,7 @@
 {
-  "timestamp": "2022-05-29T20:09:44Z",
-  "version": "1.34.14",
-  "hash": "b7b090d9",
+  "timestamp": "2020-05-01T13:39:07Z",
+  "version": "1.4.1",
+  "hash": "5d011c1e",
   "cloud": {
     "auth_type": "RS256"
   },
@@ -20,7 +20,8 @@
         "site": "ZZ-TRI-FECTA",
         "name": "AHU-1"
       }
-    }
+    },
+    "min_loglevel": 300
   },
   "discovery": {
     "families": {

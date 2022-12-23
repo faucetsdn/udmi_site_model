@@ -1,7 +1,7 @@
 {
-  "timestamp": "2022-04-21T00:33:43Z",
-  "version": "1",
-  "hash": "cca218ea",
+  "timestamp": "2020-05-01T13:39:07Z",
+  "version": "1.4.1",
+  "hash": "0dcd4955",
   "system": {
     "location": {
       "site": "ZZ-TRI-FECTA",
@@ -17,7 +17,8 @@
         "site": "ZZ-TRI-FECTA",
         "name": "AHU-22"
       }
-    }
+    },
+    "min_loglevel": 300
   },
   "gateway": {
     "gateway_id": "GAT-123",
