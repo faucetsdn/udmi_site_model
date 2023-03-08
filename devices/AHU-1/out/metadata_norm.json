@@ -1,7 +1,7 @@
 {
   "timestamp": "2020-05-01T13:39:07Z",
   "version": "1.4.1",
-  "hash": "5d011c1e",
+  "hash": "7b124a54",
   "cloud": {
     "auth_type": "RS256"
   },
@@ -26,6 +26,16 @@
   "discovery": {
     "families": {
       "virtual": { }
+    }
+  },
+  "localnet": {
+    "families": {
+      "ether": {
+        "addr": "00:50:b6:ed:5f:77"
+      },
+      "ipv4": {
+        "addr": "192.168.2.1"
+      }
     }
   },
   "testing": {
