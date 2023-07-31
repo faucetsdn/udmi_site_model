@@ -1,0 +1,79 @@
+name: Device Sequencer Test Suite
+
+on:
+  push:
+
+concurrency:
+  group: ci-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  udmis:
+    name: device sequencer test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: vars.DEVICE_NAME != ''
+    env:
+      DEVICE_NAME: ${{ vars.DEVICE_NAME }}
+      DEVICE_SERIAL: ${{ vars.DEVICE_SERIAL }}
+      GCP_PROJECT: ${{ vars.GCP_PROJECT }}
+      PUBBER_OPTS: ${{ vars.PUBBER_OPTS }}
+      SEQUENCER_OPTS: ${{ vars.SEQUENCER_OPTS }}
+      SEQUENCE_TESTS: ${{ vars.SEQUENCE_TESTS }}
+      UDMI_VERSION: ${{ vars.UDMI_VERSION }}
+    steps:
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Setup UDMI
+        run: |
+          cd $HOME
+          git clone https://github.com/grafnu/udmi.git
+          cd udmi
+          echo Checking UDMI_VERSION $UDMI_VERSION
+          git checkout $UDMI_VERSION
+          git log -n 1
+          bin/setup_base
+      - name: registrar run
+        run: |
+          echo $HOME/udmi/bin/registrar . $GCP_PROJECT $DEVICE_NAME
+          $HOME/udmi/bin/registrar . $GCP_PROJECT $DEVICE_NAME
+      - name: pubber startup
+        if: vars.PUBBER_OPTS != '' && vars.PUBBER_OPTS != 'xxx'
+        run: |
+          echo $HOME/udmi/bin/pubber . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $PUBBER_OPTS
+          $HOME/udmi/bin/pubber . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $PUBBER_OPTS > $HOME/pubber.out 2>&1 &
+          sleep 20 # Wait for supported features metadata files to be created by pubber
+          $HOME/udmi/bin/augment_metadata . $DEVICE_NAME
+      - name: sequencer run
+        run: |
+          echo $HOME/udmi/bin/sequencer $SEQUENCER_OPTS . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $SEQUENCE_TESTS
+          $HOME/udmi/bin/sequencer $SEQUENCER_OPTS . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $SEQUENCE_TESTS | tee sequencer.log
+      - name: sequencer results
+        run: |
+          RESULT_LOG=out/devices/${DEVICE_NAME}/RESULT.log
+          more out/sequencer_${DEVICE_NAME}.json $RESULT_LOG | cat
+          echo ::::::::::::::
+          echo Checking diff $RESULT_LOG expected-results_${DEVICE_NAME}.log
+          diff $RESULT_LOG expected-results_${DEVICE_NAME}.log
+      - name: pubber output log
+        if: ${{ always() }}
+        run: |
+          cat $HOME/pubber.out
+      - name: all output files
+        if: ${{ always() }}
+        run: |
+          find out/ devices/*/out -type f
+          find out/ devices/*/out -type f | xargs more | cat
+      - name: support bundle
+        if: ${{ always() }}
+        run: $HOME/udmi/bin/support
+      - uses: actions/upload-artifact@v3
+        if: ${{ always() }}
+        with:
+          if-no-files-found: error
+          name: sequencer_${{ vars.DEVICE_NAME }}_${{ github.run_id }}-${{ github.run_attempt }}
+          path: '/tmp/udmi-support_*.tgz'
