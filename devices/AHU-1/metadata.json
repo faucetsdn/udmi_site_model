@@ -19,6 +19,13 @@
     }
   },
   "system": {
+    "hardware": {
+      "make": "BOS",
+      "model": "pubber"
+    },
+    "software": {
+      "firmware": "v1"
+    },
     "location": {
       "site": "ZZ-TRI-FECTA-AHU",
       "section": "2-3N8C",
