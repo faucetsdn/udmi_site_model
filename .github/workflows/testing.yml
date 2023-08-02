@@ -31,7 +31,7 @@ jobs:
       - name: Setup UDMI
         run: |
           cd $HOME
-          git clone https://github.com/grafnu/udmi.git
+          git clone https://github.com/faucetsdn/udmi.git
           cd udmi
           echo Checking UDMI_VERSION $UDMI_VERSION
           git checkout $UDMI_VERSION
@@ -52,6 +52,10 @@ jobs:
         run: |
           echo $HOME/udmi/bin/sequencer $SEQUENCER_OPTS . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $SEQUENCE_TESTS
           $HOME/udmi/bin/sequencer $SEQUENCER_OPTS . $GCP_PROJECT $DEVICE_NAME $DEVICE_SERIAL $SEQUENCE_TESTS | tee sequencer.log
+      - name: markdown report
+        run: |
+          echo Copying device results.md to github step summary file...
+          cp out/devices/$DEVICE_NAME/results.md $GITHUB_STEP_SUMMARY
       - name: sequencer results
         run: |
           RESULT_LOG=out/devices/${DEVICE_NAME}/RESULT.log
