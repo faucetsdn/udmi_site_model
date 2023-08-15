@@ -150,8 +150,8 @@ jobs:
           more $SITE_MODEL/out/sequencer_${DEVICE_NAME}.json $RESULT_LOG | cat
           echo
           echo ::::::::::::::
-          echo Checking diff $RESULT_LOG expected-results_${DEVICE_NAME}.log
-          diff $RESULT_LOG expected-results_${DEVICE_NAME}.log
+          echo Checking diff -u expected-results_${DEVICE_NAME}.log $RESULT_LOG
+          diff -u expected-results_${DEVICE_NAME}.log $RESULT_LOG
       - name: Pubber output log
         if: vars.PUBBER_OPTS != ''
         run: |
