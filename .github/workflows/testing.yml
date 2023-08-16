@@ -148,10 +148,12 @@ jobs:
           steps to show sequencer results.
           RESULT_LOG=$SITE_MODEL/out/devices/${DEVICE_NAME}/RESULT.log
           more $SITE_MODEL/out/sequencer_${DEVICE_NAME}.json $RESULT_LOG | cat
-          echo
-          echo ::::::::::::::
-          echo Checking diff -u expected-results_${DEVICE_NAME}.log $RESULT_LOG
-          diff -u expected-results_${DEVICE_NAME}.log $RESULT_LOG
+          if [[ -d expected ]]; then
+            echo
+            echo ::::::::::::::
+            echo Checking diff -u expected/sequencer-results_${DEVICE_NAME}.log $RESULT_LOG
+            diff -u expected/sequencer-results_${DEVICE_NAME}.log $RESULT_LOG
+          fi
       - name: Pubber output log
         if: vars.PUBBER_OPTS != ''
         run: |
