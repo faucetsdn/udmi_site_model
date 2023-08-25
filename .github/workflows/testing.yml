@@ -33,7 +33,7 @@ jobs:
   udmis:
     name: Site model actions
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 30
     if: vars.UDMI_REPO != ''
     steps:
       - name: Checkout site model source
@@ -154,6 +154,9 @@ jobs:
             echo Checking diff -u expected/sequencer-results_${DEVICE_NAME}.log $RESULT_LOG
             diff -u expected/sequencer-results_${DEVICE_NAME}.log $RESULT_LOG
           fi
+      - name: sequence test timing
+        if: ${{ always() && vars.SEQUENCER_OPTS != '' }}
+        run: fgrep ' ending test ' out/sequencer.log
       - name: Pubber output log
         if: vars.PUBBER_OPTS != ''
         run: |
