@@ -33,7 +33,7 @@ jobs:
   udmis:
     name: Site model actions
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     if: vars.UDMI_REPO != ''
     steps:
       - name: Checkout site model source
