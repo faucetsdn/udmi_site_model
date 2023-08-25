@@ -156,7 +156,7 @@ jobs:
           fi
       - name: sequence test timing
         if: ${{ always() && vars.SEQUENCER_OPTS != '' }}
-        run: fgrep ' ending test ' out/sequencer.log
+        run: fgrep ' ending test ' sequencer.log
       - name: Pubber output log
         if: vars.PUBBER_OPTS != ''
         run: |
