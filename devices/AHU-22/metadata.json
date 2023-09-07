@@ -30,6 +30,9 @@
       }
     }
   },
+  "cloud": {
+    "num_id": "1234567890"
+  },
   "gateway": {
     "gateway_id": "GAT-123"
   },
