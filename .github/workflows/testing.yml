@@ -11,7 +11,6 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  UDMI_VERSION: ${{ vars.UDMI_VERSION }}
   UDMI_REPO: ${{ vars.UDMI_REPO }}
   UPDATE_OPTS: ${{ vars.UPDATE_OPTS }}
   SITE_MODEL: ${{ vars.SITE_MODEL }}
@@ -44,6 +43,7 @@ jobs:
       - name: Clone UDMI tools
         shell: bash -e {0}
         run: |
+          UDMI_VERSION=$(git rev-parse --abbrev-ref HEAD)
           echo Cloning UDMI tools repo...
           [[ -n $UDMI_REPO ]] || (echo UDMI_REPO not defined.; false)
           [[ -n $UDMI_VERSION ]] || (echo UDMI_VERSION not defined.; false)
