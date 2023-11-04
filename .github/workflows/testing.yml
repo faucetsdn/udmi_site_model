@@ -150,6 +150,7 @@ jobs:
         run: |
           steps to show sequencer results.
           RESULT_LOG=$SITE_MODEL/out/devices/${DEVICE_NAME}/RESULT.log
+          sort -k 4 $RESULT_LOG | sponge $RESULT_LOG
           more $SITE_MODEL/out/sequencer_${DEVICE_NAME}.json $RESULT_LOG | cat
           if [[ -d expected ]]; then
             echo
@@ -162,16 +163,14 @@ jobs:
         run: fgrep ' ending test ' sequencer.log
       - name: Pubber output log
         if: vars.PUBBER_OPTS != ''
-        run: |
-          more $HOME/pubber.out | cat
+        run: more $HOME/pubber.out | cat
       - name: Create support bundle
         if: ${{ always() }}
-        run: |
-          $UDMI_BIN/support
+        run: $UDMI_BIN/support
       - name: Upload support bundle
         uses: actions/upload-artifact@v3
         if: ${{ always() }}
         with:
           if-no-files-found: error
           name: udmi-support_${{ github.run_id }}-${{ github.run_attempt }}
-          path: '/tmp/udmi-support_*.tgz'
+          path: 'udmi-support_*.tgz'
