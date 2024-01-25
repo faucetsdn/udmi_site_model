@@ -1,5 +1,6 @@
 {
   "pointset": {
+    "exclude_points_from_config": true,
     "points": {
       "triangulating_axis": {
         "units": "Degrees-phase"
