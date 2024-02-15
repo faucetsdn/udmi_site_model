@@ -47,7 +47,7 @@
   },
   "discovery": {
     "families": {
-      "virtual": {
+      "vendor": {
       }
     }
   },
