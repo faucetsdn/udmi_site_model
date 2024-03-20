@@ -21,10 +21,23 @@
   "gateway": {
     "proxy_ids": [ "SNS-4", "AHU-22" ]
   },
+  "discovery": {
+    "families": {
+      "vendor": {
+      }
+    }
+  },
+  "localnet": {
+    "families": {
+      "vendor": {
+        "addr": "20231"
+      }
+    }
+  },
   "cloud": {
     "auth_type": "ES256"
   },
-  "version": 1,
+  "version": "1.5.1",
   "timestamp": "2020-05-01T13:39:07Z"
 
 }
