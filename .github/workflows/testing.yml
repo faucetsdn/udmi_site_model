@@ -12,6 +12,7 @@ concurrency:
 
 env:
   UDMI_REPO: ${{ vars.UDMI_REPO }}
+  UDMI_VERSION: ${{ vars.UDMI_VERSION }}
   UPDATE_OPTS: ${{ vars.UPDATE_OPTS }}
   SITE_MODEL: ${{ vars.SITE_MODEL }}
   REFLECTOR_PKCS8_B64: ${{ secrets.REFLECTOR_PKCS8_B64 }}
@@ -43,9 +44,9 @@ jobs:
       - name: Clone UDMI tools
         shell: bash -e {0}
         run: |
-          UDMI_VERSION=$(git rev-parse --abbrev-ref HEAD)
           echo Cloning UDMI tools repo...
           [[ -n $UDMI_REPO ]] || (echo UDMI_REPO not defined.; false)
+          [[ -n $UDMI_VERSION ]] || UDMI_VERSION=$(git rev-parse --abbrev-ref HEAD)
           [[ -n $UDMI_VERSION ]] || (echo UDMI_VERSION not defined.; false)
           cd $HOME
           git clone $UDMI_REPO
@@ -76,10 +77,10 @@ jobs:
           keyfile=$SITE_MODEL/reflector/rsa_private.pkcs8
           echo $REFLECTOR_PKCS8_B64 | tr -d ' \n' | base64 --decode > $keyfile
           md5sum $keyfile
-      - name: Upgrade UDMI components
+      - name: Upgrade UDMIS install
         if: vars.UPDATE_OPTS != ''
         run: |
-          steps to update GCP udmis k8s install
+          steps to update GKE udmis k8s install
           echo $UDMI_BIN/update_udmis $SITE_MODEL $PROJECT_ID
           $UDMI_BIN/update_udmis $SITE_MODEL $PROJECT_ID
       - name: Generate device key pair
