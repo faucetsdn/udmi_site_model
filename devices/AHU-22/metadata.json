@@ -47,6 +47,13 @@
       }
     }
   },
+  "testing": {
+    "targets": {
+      "tweaked_ref": {
+        "target_point": "filter_alarm_pressure_status"
+      }
+    }
+  },
   "version": "1.4.1",
   "timestamp": "2020-05-01T13:39:07Z"
 }
