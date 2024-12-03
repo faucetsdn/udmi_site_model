@@ -24,6 +24,9 @@
   "discovery": {
     "families": {
       "vendor": {
+      },
+      "bacnet": {
+        "periodic_sec": 60
       }
     }
   },
@@ -31,6 +34,9 @@
     "families": {
       "vendor": {
         "addr": "20231"
+      },
+      "bacnet": {
+        "addr": "217321"
       }
     }
   },
