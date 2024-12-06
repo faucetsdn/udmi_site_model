@@ -26,7 +26,7 @@
       "vendor": {
       },
       "bacnet": {
-        "periodic_sec": 60
+        "scan_interval_sec": 60
       }
     }
   },
