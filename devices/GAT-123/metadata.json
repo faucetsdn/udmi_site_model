@@ -26,7 +26,6 @@
       "vendor": {
       },
       "bacnet": {
-        "scan_interval_sec": 60
       }
     }
   },
@@ -37,6 +36,13 @@
       },
       "bacnet": {
         "addr": "217321"
+      }
+    }
+  },
+  "testing": {
+    "targets": {
+      "scan_family": {
+        "target_value": "bacnet"
       }
     }
   },
