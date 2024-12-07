@@ -80,6 +80,9 @@
       "invalid": {
         "target_point": "filter_differential_pressure_sensor",
         "target_value": 15
+      },
+      "scan_family": {
+        "target_value": "vendor"
       }
     }
   },
