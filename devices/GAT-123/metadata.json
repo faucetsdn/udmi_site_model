@@ -19,7 +19,14 @@
     }
   },
   "gateway": {
-    "proxy_ids": [ "SNS-4", "AHU-22" ]
+    "proxy_ids": [ "SNS-4", "AHU-22",
+                   "TAP-01", "TAP-02", "TAP-03", "TAP-04", "TAP-05", "TAP-06", "TAP-07", "TAP-08", "TAP-09",
+                   "TAP-11", "TAP-12", "TAP-13", "TAP-14", "TAP-15", "TAP-16", "TAP-17", "TAP-18", "TAP-19",
+                   "TAP-21", "TAP-22", "TAP-23", "TAP-24", "TAP-25", "TAP-26", "TAP-27", "TAP-28", "TAP-29",
+                   "TAP-31", "TAP-32", "TAP-33", "TAP-34", "TAP-35", "TAP-36", "TAP-37", "TAP-38", "TAP-39",
+                   "TAP-41", "TAP-42", "TAP-43", "TAP-44", "TAP-45", "TAP-46", "TAP-47", "TAP-48", "TAP-49",
+                   "TAP-51", "TAP-52", "TAP-53", "TAP-54", "TAP-55", "TAP-56", "TAP-57", "TAP-58", "TAP-59"
+                 ]
   },
   "discovery": {
     "families": {
