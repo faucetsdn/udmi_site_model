@@ -1,4 +1,30 @@
 {
+  "cloud": {
+    "auth_type": "ES256"
+  },
+  "discovery": {
+    "families": {
+      "bacnet": {},
+      "vendor": {}
+    }
+  },
+  "gateway": {
+    "proxy_ids": [
+      "SNS-4",
+      "AHU-22"
+    ]
+  },
+  "localnet": {
+    "families": {
+      "bacnet": {
+        "addr": "217321"
+      },
+      "vendor": {
+        "addr": "20231",
+        "network": "3"
+      }
+    }
+  },
   "pointset": {
     "points": {
       "globulating_globar": {
@@ -13,29 +39,8 @@
     "physical_tag": {
       "asset": {
         "guid": "drw://TBB",
-        "site": "ZZ-TRI-FECTA",
-        "name": "GAT-123"
-      }
-    }
-  },
-  "gateway": {
-    "proxy_ids": [ "SNS-4", "AHU-22" ]
-  },
-  "discovery": {
-    "families": {
-      "vendor": {
-      },
-      "bacnet": {
-      }
-    }
-  },
-  "localnet": {
-    "families": {
-      "vendor": {
-        "addr": "20231"
-      },
-      "bacnet": {
-        "addr": "217321"
+        "name": "GAT-123",
+        "site": "ZZ-TRI-FECTA"
       }
     }
   },
@@ -46,10 +51,6 @@
       }
     }
   },
-  "cloud": {
-    "auth_type": "ES256"
-  },
-  "version": "1.5.1",
-  "timestamp": "2020-05-01T13:39:07Z"
-
+  "timestamp": "2020-05-01T13:39:07Z",
+  "version": "1.5.1"
 }
