@@ -44,13 +44,6 @@
       }
     }
   },
-  "testing": {
-    "targets": {
-      "scan_family": {
-        "target_value": "bacnet"
-      }
-    }
-  },
   "timestamp": "2020-05-01T13:39:07Z",
   "version": "1.5.1"
 }
