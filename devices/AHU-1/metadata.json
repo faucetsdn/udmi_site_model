@@ -8,6 +8,11 @@
       "bacnet": {}
     }
   },
+  "features": {
+    "system.software.updates": {
+      "stage": "preview"
+    }
+  },
   "localnet": {
     "families": {
       "bacnet": {
