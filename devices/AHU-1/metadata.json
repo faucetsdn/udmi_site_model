@@ -25,11 +25,6 @@
       }
     }
   },
-  "features": {
-    "system.software.updates": {
-      "stage": "preview"
-    }
-  },
   "pointset": {
     "points": {
       "filter_alarm_pressure_status": {
@@ -103,26 +98,14 @@
       },
       "fail_parse": {
         "blob_name": "pubber_module",
-        "url": "data:application/json;base64,malformed_non_base64!",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "url": "data:application/json;base64,bm90IGEganNvbg==",
+        "sha256": "80858a2561ad177f6563c3f87b4943ca296c9ba4e6da14fe7400638568d8ccd5",
         "version": "v2"
       },
       "fail_hash": {
         "blob_name": "pubber_module",
         "url": "data:application/json;base64,eyJ2ZXJzaW9uIjoidjIifQ==",
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
-        "version": "v2"
-      },
-      "fail_incompatible": {
-        "blob_name": "pubber_module",
-        "url": "data:application/json;base64,eyJ2ZXJzaW9uIjoidjIiLCJzaW11bGF0ZSI6ImhhcmR3YXJlSW5jb21wYXRpYmxlIn0=",
-        "sha256": "d5d2f4eb09f8d3c37dc2880a0f8f96619418a417a8d735ebd67c7639aa843240",
-        "version": "v2"
-      },
-      "fail_dependency": {
-        "blob_name": "pubber_module",
-        "url": "data:application/json;base64,eyJ2ZXJzaW9uIjoidjIiLCJzaW11bGF0ZSI6InNvZnR3YXJlRGVwZW5kZW5jeU1pc21hdGNoIn0=",
-        "sha256": "af7c2b897ecd1b422ef62ffe43e3dc6e8a01307c3efccd3e20c2e55c78f8ae1a",
         "version": "v2"
       }
     }
