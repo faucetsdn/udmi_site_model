@@ -70,7 +70,8 @@
       }
     },
     "software": {
-      "firmware": "v1"
+      "firmware": "v1",
+      "pubber_module": "v1"
     }
   },
   "testing": {
