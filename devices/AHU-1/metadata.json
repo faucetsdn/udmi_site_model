@@ -71,7 +71,7 @@
     },
     "software": {
       "firmware": "v1",
-      "pubber_module": "v1"
+      "system": "v1"
     }
   },
   "testing": {
@@ -91,37 +91,37 @@
     },
     "blob_update_targets": {
       "success": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "data:application/json;base64,eyJ2ZXJzaW9uIjoidjIifQ==",
         "sha256": "0923c04472e891c960e0339a6c2ffaa1228be79ee8da8171380cc4b4a66e7c37",
         "version": "v2"
       },
       "fail_fetch": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "http://localhost:1/bogus",
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "version": "v2"
       },
       "fail_parse": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "data:application/json;base64,bm90IGEganNvbg==",
         "sha256": "80858a2561ad177f6563c3f87b4943ca296c9ba4e6da14fe7400638568d8ccd5",
         "version": "v2"
       },
       "fail_hash": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "data:application/json;base64,eyJ2ZXJzaW9uIjoidjIifQ==",
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "version": "v2"
       },
       "fail_incompatible": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "data:application/json;base64,eyJ0cmlnZ2VyIjoiaW5jb21wYXRpYmxlIn0=",
         "sha256": "9b9f95fb7a37147bfd7cf3e4e6a0979f040455a8e2994f6431f7ad0838419188",
         "version": "v2"
       },
       "fail_oversize": {
-        "blob_name": "pubber_module",
+        "blob_name": "system",
         "url": "http://localhost:1/mock_oversize",
         "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "version": "v2"
