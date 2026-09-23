@@ -10,6 +10,10 @@
   },
   "localnet": {
     "families": {
+      "bacnet": {
+        "addr": "58231",
+        "network": "9289"
+      },
       "vendor": {
         "addr": "0x65",
         "network": "22"
@@ -19,19 +23,23 @@
   "pointset": {
     "points": {
       "filter_alarm_pressure_status": {
-        "ref": "BV11.present_value",
+        "ref": "BV/11#present_value",
         "units": "No-units"
       },
       "filter_differential_pressure": {
         "units": "Bars"
       },
       "filter_differential_pressure_sensor": {
-        "ref": "AV12.present_value",
+        "ref": "AV/12#present_value",
         "units": "Degrees-Celsius"
       }
     }
   },
   "system": {
+    "hardware": {
+      "make": "BOS",
+      "model": "ahu"
+    },
     "location": {
       "position": {
         "x": -111.0,

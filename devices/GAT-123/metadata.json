@@ -17,7 +17,8 @@
   "localnet": {
     "families": {
       "bacnet": {
-        "addr": "217321"
+        "addr": "217321",
+        "network": "9288"
       },
       "vendor": {
         "addr": "20231",
@@ -33,6 +34,10 @@
     }
   },
   "system": {
+    "hardware": {
+      "make": "BOS",
+      "model": "gateway"
+    },
     "location": {
       "section": "2-3N8C"
     },
