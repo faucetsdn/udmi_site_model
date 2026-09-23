@@ -22,10 +22,6 @@
     }
   },
   "system": {
-    "hardware": {
-      "make": "BOS",
-      "model": "sensor"
-    },
     "location": {
       "section": "2-3N8C"
     },

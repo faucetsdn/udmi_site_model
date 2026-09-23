@@ -34,10 +34,6 @@
     }
   },
   "system": {
-    "hardware": {
-      "make": "BOS",
-      "model": "gateway"
-    },
     "location": {
       "section": "2-3N8C"
     },

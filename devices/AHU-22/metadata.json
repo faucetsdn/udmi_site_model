@@ -36,10 +36,6 @@
     }
   },
   "system": {
-    "hardware": {
-      "make": "BOS",
-      "model": "ahu"
-    },
     "location": {
       "position": {
         "x": -111.0,
